@@ -1,0 +1,101 @@
+name: ZenPacks.MatthieuBouthors.BlueCoatProxySG
+
+classes:
+  BlueCoatProxySGDevice:
+    base: [zenpacklib.Device]
+    label: ProxySG
+    properties:
+      serial:
+        type: string
+        label: Serial Number
+
+  BlueCoatSGHealthCheck:
+    base: [zenpacklib.Component]
+    label: Health Check
+    properties:
+      deviceHealthCheckName:
+        type: string
+        label: Name
+
+  BlueCoatSGUsage:
+    base: [zenpacklib.Component]
+    label: Usage
+    properties:
+      deviceUsageName:
+        type: string
+        label: Name
+ 
+  BlueCoatSGDisk:
+    base: [zenpacklib.Component]
+    label: Disk
+    properties:
+      deviceDiskVendor:
+        type: string
+        label: Vendor
+      deviceDiskProduct:
+        type: string
+        label: Product
+      deviceDiskRevision:
+        type: string
+        label: Revision
+      deviceDiskSerialN:
+        type: string
+        label: Serial number
+      deviceDiskBlockSize:
+        type: int
+        label: Block size
+      deviceDiskBlockCount:
+        type: int
+        label: Block numbers
+
+class_relationships:
+  - BlueCoatProxySGDevice 1:MC BlueCoatSGHealthCheck
+  - BlueCoatProxySGDevice 1:MC BlueCoatSGUsage
+  - BlueCoatProxySGDevice 1:MC BlueCoatSGDisk
+
+device_classes:
+  /Server/BlueCoat:
+    remove: false
+
+    templates:
+      HealthCheck:
+        description: Blue Coat HealthCheck monitoring template
+
+        datasources:
+          State:
+            type: SNMP
+            oid: .1.3.6.1.4.1.3417.2.7.1.2.1.1.2
+
+            datapoints:
+              State:
+                rrdtype: GAUGE
+
+          Time:
+            type: SNMP
+            oid: .1.3.6.1.4.1.3417.2.7.1.2.1.1.3
+
+            datapoints:
+              Time:
+                rrdtype: GAUGE
+
+        graphs:
+          State:
+            graphpoints:
+              State:
+                dpName: State_State
+
+          Time:
+            graphpoints:
+              Time:
+                dpName: Time_Time
+
+
+
+
+
+  /Server/BlueCoat/ProxySG:
+    remove: true
+    zProperties:
+      zPythonClass: ZenPacks.MatthieuBouthors.BlueCoatProxySG.BlueCoatProxySGDevice
+      zSnmpMonitorIgnore: false
+
