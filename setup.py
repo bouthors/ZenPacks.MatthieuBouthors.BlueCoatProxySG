@@ -3,7 +3,7 @@
 # or saved.  Do not modify them directly here.
 # NB: PACKAGES is deprecated
 NAME = "ZenPacks.MatthieuBouthors.BlueCoatProxySG"
-VERSION = "0.7.17"
+VERSION = "0.7.18"
 AUTHOR = "Matthieu Bouthors"
 LICENSE = ""
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.MatthieuBouthors']

@@ -3,7 +3,7 @@ from Products.DataCollector.plugins.CollectorPlugin import (
     )
 
 
-class ProxySG(SnmpPlugin):
+class BCSGUsage(SnmpPlugin):
     relname = 'blueCoatSGUsage'
     modname = 'ZenPacks.MatthieuBouthors.BlueCoatProxySG.BlueCoatSGUsage'
 

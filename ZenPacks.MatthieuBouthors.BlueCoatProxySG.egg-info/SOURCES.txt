@@ -23,6 +23,8 @@ ZenPacks/MatthieuBouthors/BlueCoatProxySG/modeler/plugins/__init__.py
 ZenPacks/MatthieuBouthors/BlueCoatProxySG/modeler/plugins/__init__.pyc
 ZenPacks/MatthieuBouthors/BlueCoatProxySG/modeler/plugins/MatthieuBouthors/__init__.py
 ZenPacks/MatthieuBouthors/BlueCoatProxySG/modeler/plugins/MatthieuBouthors/__init__.pyc
+ZenPacks/MatthieuBouthors/BlueCoatProxySG/modeler/plugins/MatthieuBouthors/snmp/BCSGUsage.py
+ZenPacks/MatthieuBouthors/BlueCoatProxySG/modeler/plugins/MatthieuBouthors/snmp/BC_SG_Usage.pyc
 ZenPacks/MatthieuBouthors/BlueCoatProxySG/modeler/plugins/MatthieuBouthors/snmp/ProxySG.py
 ZenPacks/MatthieuBouthors/BlueCoatProxySG/modeler/plugins/MatthieuBouthors/snmp/ProxySG.pyc
 ZenPacks/MatthieuBouthors/BlueCoatProxySG/modeler/plugins/MatthieuBouthors/snmp/__init__.py
