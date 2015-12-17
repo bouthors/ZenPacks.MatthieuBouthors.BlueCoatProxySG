@@ -4,7 +4,7 @@ from Products.DataCollector.plugins.CollectorPlugin import (
 
 
 class BCSGUsage(SnmpPlugin):
-    relname = 'blueCoatSGUsage'
+    relname = 'blueCoatSGUsages'
     modname = 'ZenPacks.MatthieuBouthors.BlueCoatProxySG.BlueCoatSGUsage'
 
 
@@ -34,6 +34,5 @@ class BCSGUsage(SnmpPlugin):
                 }))
 	log.info(rm)
 
-        log(rm)
         return rm
 

@@ -70,6 +70,5 @@ class ProxySG(SnmpPlugin):
                 }))
 	log.info(rm2)
 
-#        log(rm)
         return rm
 
